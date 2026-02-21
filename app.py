@@ -3,7 +3,7 @@ import pandas as pd
 import pickle
 
 # Load model
-with open("model.pkl", "rb") as file:
+with open("Loan_Approval_Streamlit_App/model.pkl", "rb") as file:
     model = pickle.load(file)
 
 st.title("Loan Approval Prediction")
@@ -46,4 +46,5 @@ if st.button("Predict Loan Status"):
         st.success("✅ Loan Approved")
     else:
         st.error("❌ Loan Rejected")
+
 
